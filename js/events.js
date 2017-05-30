@@ -1,5 +1,6 @@
 $(function(){
-	
+
+
 	$('#homePanel').css("display","none");
 	$('#expPanel').css("display","none");
 	$('#skillsPanel').css("display","none");
@@ -7,15 +8,16 @@ $(function(){
 	$('#projPanel').css("display","none");
 	$('#contactPanel').css("display","none");
 	$('#rightPanelDiv').html($('#homePanel').html());
+	$("#rightPanelDiv").css("background-color", "#00BDBD");
 	$('#homeNavItem').addClass("active");
 	$("#homeText").addClass("eventBold");
 
 
 		$('#homeNavItem').click(function(){
 
-			$('#rightPanelDiv').html($('#homePanel').html());
+				$('#rightPanelDiv').html($('#homePanel').html());
 				$(this).addClass("active").siblings().removeClass("active");
-
+				$("#rightPanelDiv").css("background-color", "#00BDBD");
 				$('li > a > span').removeClass("eventBold");
 				$("#homeText").addClass("eventBold");
 				
@@ -27,7 +29,7 @@ $(function(){
 				$(this).addClass("active").siblings().removeClass("active");
 				 //$('.homeTest').addClass(".to-left");
 				$('#expTest').css("padding-left", "800px");
-   				
+   				$("#rightPanelDiv").css("background-color", "");
 				
 				$('li > a > span').removeClass("eventBold");
 				$("#expText").addClass("eventBold");
@@ -38,7 +40,7 @@ $(function(){
 
 			$('#rightPanelDiv').html($('#projPanel').html());
 			$(this).addClass("active").siblings().removeClass("active");
-
+			$("#rightPanelDiv").css("background-color", "");
 			$('li > a > span').removeClass("eventBold");
 			$("#prjText").addClass("eventBold");
 			
@@ -49,7 +51,7 @@ $(function(){
 
 			$('#rightPanelDiv').html($('#skillsPanel').html());
 				$(this).addClass("active").siblings().removeClass("active");
-
+				$("#rightPanelDiv").css("background-color", "");
 				$('li > a > span').removeClass("eventBold");
 				$("#skillText").addClass("eventBold");
 				
@@ -59,7 +61,7 @@ $(function(){
 
 			$('#rightPanelDiv').html($('#eduPanel').html());
 				$(this).addClass("active").siblings().removeClass("active");
-
+				$("#rightPanelDiv").css("background-color", "");
 				$('li > a > span').removeClass("eventBold");
 				$("#eduText").addClass("eventBold");
 			
@@ -68,7 +70,7 @@ $(function(){
 
 			$('#rightPanelDiv').html($('#contactPanel').html());
 				$(this).addClass("active").siblings().removeClass("active");
-
+				$("#rightPanelDiv").css("background-color", "");
 				$('li > a > span').removeClass("eventBold");
 				$("#cntctText").addClass("eventBold");
 				
@@ -96,5 +98,8 @@ $(function(){
 				$('.3rdbar').toggleClass("bottom-bar");
 
 			});
+
+			
+
 
 })
